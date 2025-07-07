@@ -81,15 +81,24 @@ const Header = () => {
                   >
                     <Link to="/work">{item}</Link>
                   </motion.div>
+                ) : item === 'About' ? (
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                    key={index}
+                    className="px-4 py-2 rounded-md text-sm font-medium bg-zinc-800 text-white hover:bg-zinc-700 transition"
+                  >
+                    <Link to="/about">{item}</Link>
+                  </motion.div>
                 ) : (
-                  <motion.button
+                  <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                     key={index}
                     className="px-4 py-2 rounded-md text-sm font-medium bg-zinc-800 text-white hover:bg-zinc-700 transition"
                   >
                     {item}
-                  </motion.button>
+                  </motion.div>
                 )
               ))}
             </div>
@@ -175,12 +184,10 @@ const Header = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                   className="px-4 text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition py-2 rounded-md cursor-pointer space-y-2"
                 >
-                  {socialLinks.map((link, i) => (
-                    <div key={i} className="flex justify-between items-center">
-                      <span>{link}</span>
-                      <ArrowUpRight size={14} />
-                    </div>
-                  ))}
+                  <a href="https://www.linkedin.com/in/murt4z4/" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center">
+  <span>Linkedin</span>
+  <ArrowUpRight size={14} />
+</a>
                 </motion.div>
               </motion.div>
             )}
