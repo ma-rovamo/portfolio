@@ -50,9 +50,8 @@ const Header = () => {
 
   return (
     <div
-      className={`px-4 py-6 md:px-16 md:py-6 sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
-      }`}
+      className={`px-4 py-6 md:px-16 md:py-6 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
+        }`}
     >
       <nav className="flex justify-between items-center text-white">
         {/* Profile Image */}
@@ -77,7 +76,7 @@ const Header = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                     key={index}
-                    className="px-4 py-2 rounded-md text-sm font-medium bg-zinc-800 text-white hover:bg-zinc-700 transition"
+                    className="px-4 py-2 rounded-md text-sm font-medium bg-[#303030] text-white hover:bg-zinc-700 transition"
                   >
                     <Link to="/work">{item}</Link>
                   </motion.div>
@@ -185,9 +184,9 @@ const Header = () => {
                   className="px-4 text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition py-2 rounded-md cursor-pointer space-y-2"
                 >
                   <a href="https://www.linkedin.com/in/murt4z4/" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center">
-  <span>Linkedin</span>
-  <ArrowUpRight size={14} />
-</a>
+                    <span>Linkedin</span>
+                    <ArrowUpRight size={14} />
+                  </a>
                 </motion.div>
               </motion.div>
             )}

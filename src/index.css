@@ -2,13 +2,11 @@
 @import "tailwindcss";
 
 
-
-
-
 :root {
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    font-family: "Manrope", sans-serif;
@@ -16,4 +14,13 @@
 
 body{
   background-color: #101010;
+}
+
+@keyframes achievement-slider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-achievement-slider {
+  animation: achievement-slider 18s linear infinite;
 }

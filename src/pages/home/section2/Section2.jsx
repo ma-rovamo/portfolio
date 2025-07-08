@@ -12,7 +12,7 @@ const GallerySection = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
+      transition={{ duration: 0.7,delay:'0.4', ease: 'easeOut' }}
     >
       <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {projectsData.map((project) => (
