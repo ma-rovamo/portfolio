@@ -106,7 +106,7 @@ const Header = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
-              className="px-4 py-2 rounded-md text-sm font-medium bg-white text-black"
+              className="px-4 py-2 rounded-md text-sm font-medium  bg-white text-black"
               onClick={handleContactClick}
             >
               {contactItem}
