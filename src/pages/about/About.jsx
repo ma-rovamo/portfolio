@@ -200,18 +200,18 @@ const ProfileSection = () => {
           {/* About Sections */}
           <div className="space-y-20 pt-8">
             {aboutSections.map((sec, idx) => (
-  <motion.section
-    key={sec.id}
-    id={sec.id}
-    ref={el => (sectionRefs.current[sec.id] = el)}
-    className="scroll-mt-32"
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7, delay: idx * 0.15 }}
-    viewport={{ once: true, amount: 0.2 }}
-  >
-    <h2 className="text-2xl font-bold text-white mb-4">{sec.label}</h2>
-    {sec.id === 'expertise' ? (
+              <motion.section
+                key={sec.id}
+                id={sec.id}
+                ref={el => (sectionRefs.current[sec.id] = el)}
+                className="scroll-mt-32"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: idx * 0.15 }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <h2 className="text-2xl font-bold text-white mb-4">{sec.label}</h2>
+                {sec.id === 'expertise' ? (
                   <div>
                     {/* Skill Tags */}
                     <div className="flex flex-wrap gap-3 mb-8">
@@ -231,6 +231,7 @@ const ProfileSection = () => {
                         </span>
                       ))}
                     </div>
+
                     {/* Experience List */}
                     <div className="flex flex-col gap-0">
                       {[
@@ -245,6 +246,13 @@ const ProfileSection = () => {
                         {
                           logo: 'https://img.icons8.com/color/48/000000/ethereum.png',
                           title: 'Head of Design',
+                          company: 'dcSpark Inc.',
+                          location: 'Austin, Texas, United States',
+                          date: 'Nov 2021 – Jul 2023',
+                          duration: '1 year 9 months',
+                        }, {
+                          logo: 'https://img.icons8.com/color/48/000000/ethereum.png',
+                          title: 'Rovqm',
                           company: 'dcSpark Inc.',
                           location: 'Austin, Texas, United States',
                           date: 'Nov 2021 – Jul 2023',
@@ -288,7 +296,7 @@ const ProfileSection = () => {
                             { name: 'Photoshop', subtitle: 'Image Editing', logo: '/skills/photoshop.png' },
                             { name: 'Illustrator', subtitle: 'Vector Graphics', logo: '/skills/illustrator.png' },
                             { name: 'Webflow', subtitle: 'No-Code Development', logo: '/skills/webflow.png' },
-                            { name: 'Framer', subtitle: 'No-Code & Prototyping', logo: '/skills/framermotion.png',  },
+                            { name: 'Framer', subtitle: 'No-Code & Prototyping', logo: '/skills/framermotion.png', },
                             { name: 'ChatGPT', subtitle: 'AI Assistance', logo: '/skills/chatgpt.png' },
                             { name: 'Midjourney', subtitle: 'AI Image Generation', logo: '/skills/midjourney.png' },
                             { name: 'DeepSeek', subtitle: 'AI Assistance', logo: '/skills/deepseek.png' },
@@ -340,21 +348,21 @@ const ProfileSection = () => {
                               <div className="relative w-full overflow-hidden">
                                 <div className="flex gap-3 animate-achievement-slider" style={{ minWidth: '1200px' }}>
                                   {[...achievements, ...achievements].map((item, idx) => (
-  <motion.div
-    key={idx}
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: idx * 0.18 }}
-    viewport={{ once: true, amount: 0.2 }}
-    className="relative bg-[#343434] rounded-tl-[10px] rounded-tr-[40px] rounded-bl-[10px] rounded-br-[10px] py-5 px-7 flex flex-col justify-between items-start min-h-[220px] h-full w-[220px] max-w-xs overflow-hidden shadow-lg"
-  >
-    <span className="text-xl md:text-3xl font-bold text-white z-10">{item.number}</span>
-    <div className="flex-1 w-full"></div>
-    <span className="text-gray-300 text-sm font-medium z-10 whitespace-pre-line mt-auto mb-0">
-      {item.label.split(' ').map((word, i) => (i && i % 3 === 0 ? '\n' + word : word)).join(' ').replace(/\\n/g, '\n')}
-    </span>
-  </motion.div>
-))}
+                                    <motion.div
+                                      key={idx}
+                                      initial={{ opacity: 0, y: 40 }}
+                                      whileInView={{ opacity: 1, y: 0 }}
+                                      transition={{ duration: 0.6, delay: idx * 0.18 }}
+                                      viewport={{ once: true, amount: 0.2 }}
+                                      className="relative bg-[#343434] rounded-tl-[10px] rounded-tr-[40px] rounded-bl-[10px] rounded-br-[10px] py-5 px-7 flex flex-col justify-between items-start min-h-[220px] h-full w-[220px] max-w-xs overflow-hidden shadow-lg"
+                                    >
+                                      <span className="text-xl md:text-3xl font-bold text-white z-10">{item.number}</span>
+                                      <div className="flex-1 w-full"></div>
+                                      <span className="text-gray-300 text-sm font-medium z-10 whitespace-pre-line mt-auto mb-0">
+                                        {item.label.split(' ').map((word, i) => (i && i % 3 === 0 ? '\n' + word : word)).join(' ').replace(/\\n/g, '\n')}
+                                      </span>
+                                    </motion.div>
+                                  ))}
                                 </div>
                               </div>
                               {/* Keyframes in index.css: @keyframes achievement-slider { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} } */}

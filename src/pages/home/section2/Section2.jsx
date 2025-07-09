@@ -22,6 +22,7 @@ const GallerySection = () => {
           >
             {/* Image */}
             <img
+            onClick={() => navigate(`/work/project/${project.id}`)}
               src={project.src}
               alt={project.title}
               className="w-full h-82 object-cover group-hover:scale-105 transition-transform duration-300"
