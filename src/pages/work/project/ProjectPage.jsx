@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import projectsData from '../../../data/projectsData';
@@ -8,6 +8,11 @@ const ProjectPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find((p) => p.id === id);
+
+  // Scroll to top when component mounts or project ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   // Filter out the current project by id and ensure uniqueness by id
   const moreProjects = [];
