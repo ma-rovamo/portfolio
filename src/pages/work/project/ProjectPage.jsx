@@ -47,7 +47,7 @@ const ProjectPage = () => {
           className="w-full min-h-[60vh] px-4 py-6 md:px-14 md:py-6"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3">
